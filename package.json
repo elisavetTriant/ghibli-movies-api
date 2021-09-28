@@ -1,6 +1,6 @@
 {
   "name": "ghibli-movies-api",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A sample API for Studio Ghibli Films Information",
   "main": "app.js",
   "scripts": {

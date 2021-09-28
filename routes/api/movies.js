@@ -23,4 +23,15 @@ router.get('/', (req, res) => {
     })
 })
 
+//Get movie detail info - req param movie name
+router.get('/:name', (req, res) => {
+    const { name } = req.params;
+    Movie.findOne({ movie_name: name })
+        .then(movie => {
+            if (!movie) { throw new Error('Movie not found in database'); }
+            res.status(200).json(movie);
+        })
+        .catch(err => res.status(200).json({ error: err.message }));
+})
+
 module.exports = router;
